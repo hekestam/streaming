@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1024"
+   height="276.742"
+   viewBox="0 0 1024 276.742"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Netflix_bw.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.65527344"
+     inkscape:cx="411.27869"
+     inkscape:cy="148.79285"
+     inkscape:window-width="1440"
+     inkscape:window-height="821"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="m 140.803,258.904 c -15.404,2.705 -31.079,3.516 -47.294,5.676 L 44.051,119.724 V 270.797 C 28.647,272.418 14.594,274.58 0,276.742 V 0 H 41.08 L 97.292,157.021 V 0 h 43.511 z m 85.131,-157.558 c 16.757,0 42.431,-0.811 57.835,-0.811 v 43.24 c -19.189,0 -41.619,0 -57.835,0.811 v 64.322 c 25.405,-1.621 50.809,-3.785 76.482,-4.596 v 41.617 L 182.692,255.39 V 0 H 302.416 V 43.241 H 225.934 Z M 463.218,43.242 H 418.356 V 242.15 c -14.594,0 -29.188,0 -43.239,0.539 V 43.242 H 330.255 V 0 H 463.22 Z m 70.266,55.132 h 59.187 v 43.24 h -59.187 v 98.104 H 491.051 V 0 h 120.808 v 43.241 h -78.375 z m 148.641,103.507 c 24.594,0.539 49.456,2.434 73.51,3.783 v 42.701 c -38.646,-2.434 -77.293,-4.863 -116.75,-5.676 V 0 h 43.24 z m 109.994,49.457 c 13.783,0.812 28.377,1.623 42.43,3.242 V 0 h -42.43 z M 1024,0 969.137,131.615 1024,276.742 c -16.217,-2.162 -32.432,-5.135 -48.648,-7.838 l -31.078,-79.994 -31.617,73.51 c -15.678,-2.705 -30.812,-3.516 -46.484,-5.678 L 921.845,129.992 871.576,0 h 46.482 L 946.435,72.699 976.705,0 Z"
+     fill="#d81f26"
+     id="path1"
+     style="fill:#000000;fill-opacity:1" />
+</svg>
