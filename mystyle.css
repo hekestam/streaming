@@ -65,3 +65,32 @@ span.link-spanner{
   z-index: 1;
   position:absolute;
 }
+
+div.text_tv_container {
+	margin:auto;
+	text-align:center;
+}
+
+div.text_tv_overlay {
+	color:#eeeeee;
+	background-color:black;
+	user-select:none;
+	font-family:courier;
+	font-size:1.75rem;
+	position:fixed;
+	top:4px;
+}
+
+div#page_number {
+	left:20%;
+}
+
+div#clock {
+	left:75%;
+}
+
+img#text_tv_img {
+	height:100%;
+	width:100%;
+	object-fit: contain;
+}
