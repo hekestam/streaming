@@ -28,4 +28,6 @@ function updateClock() {
 	time_el.innerHTML = '<strong>' + time_string + '</strong>';
 }
 
+updateClock();
+
 const intervalID = setInterval(updateClock, 250);
