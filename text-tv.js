@@ -17,3 +17,15 @@ xhr.onload = function() {
 	}
 };
 
+function updateClock() {
+	let d = new Date();
+	let hour = String(d.getHours()).padStart(2,'0');
+	let minute = String(d.getMinutes()).padStart(2,'0');
+	let sec = String(d.getSeconds()).padStart(2,'0');
+
+	let time_string = hour + ':' + minute + ':' + sec;
+	let time_el = document.getElementById("clock");
+	time_el.innerHTML = '<strong>' + time_string + '</strong>';
+}
+
+const intervalID = setInterval(updateClock, 250);
