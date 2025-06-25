@@ -47,7 +47,8 @@ function updateClock() {
 
 	let time_string = hour + ':' + minute + ':' + sec;
 	let time_el = document.getElementById("clock");
-	time_el.innerHTML = '<strong>' + time_string + '</strong>';
+	let spacer = '&nbsp;'.repeat(7);
+	time_el.innerHTML = '<strong>' + spacer + time_string + '</strong>';
 }
 
 function updatePageNumber(number) {

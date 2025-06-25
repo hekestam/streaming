@@ -66,9 +66,16 @@ span.link-spanner{
   position:absolute;
 }
 
+div.text_tv_wrapper {
+	margin:auto;
+	text-align:center;
+}
+
 div.text_tv_container {
 	margin:auto;
 	text-align:center;
+	display:inline-block;
+	position:relative;
 }
 
 div.text_tv_overlay {
@@ -76,17 +83,17 @@ div.text_tv_overlay {
 	background-color:black;
 	user-select:none;
 	font-family:courier;
-	font-size:1.75rem;
-	position:fixed;
-	top:4px;
+	font-size:3.75svh;
+	position:absolute;
+	top:-0.25svh;
 }
 
 div#page_number {
-	left:20%;
+	left:6%;
 }
 
 div#clock {
-	left:75%;
+	right:-0%;
 	color:#ffff00
 }
 
