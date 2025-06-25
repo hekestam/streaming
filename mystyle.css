@@ -81,6 +81,7 @@ div.text_tv_container {
 div.text_tv_overlay {
 	color:#eeeeee;
 	background-color:black;
+	-webkit-user-select:none;
 	user-select:none;
 	font-family:courier;
 	font-size:3.75svh;
