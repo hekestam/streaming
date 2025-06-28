@@ -4,6 +4,12 @@ let next_page_number = '101';
 let last_page_number = '100';
 let key_input_var = '';
 
+let sub_pages_array = [];
+let current_subpage = 0;
+let prev_subpage = 0;
+let next_subpage = 0;
+let maximum_subpage = 1;
+
 let resp
 
 function loadPage() {
@@ -20,10 +26,9 @@ function loadPage() {
 			// alert(`Done, got ${xhr.response.length} bytes`); // response is the server response
 			resp = xhr.response;
 			if (resp['status'] === 'success') {
-				let gif = resp['data']['subPages'][0]['gifAsBase64'];
-
-				let img = document.getElementById("text_tv_img");
-				img.src = "data:image/gif;base64," + gif;
+				sub_pages_array = resp['data']['subPages'];
+				current_subpage = 0;
+				loadSubPage()
 				
 				last_page_number = current_page_number;
 				current_page_number = resp['data']['pageNumber'];
@@ -37,6 +42,23 @@ function loadPage() {
 			}
 		}
 	};
+}
+
+function loadSubPage() {
+	let temp_sub_page = current_subpage;
+
+	if (sub_pages_array.length > temp_sub_page) {
+		let gif = sub_pages_array[temp_sub_page]['gifAsBase64'];
+	
+		let img = document.getElementById("text_tv_img");
+		img.src = "data:image/gif;base64," + gif;
+
+		next_subpage = (temp_sub_page + 1) % sub_pages_array.length;
+		prev_subpage = (temp_sub_page - 1) % sub_pages_array.length;
+		if (prev_subpage < 0) {
+			prev_subpage += sub_pages_array.length;
+		}
+	}
 }
 
 function updateClock() {
@@ -59,7 +81,7 @@ function updatePageNumber(number) {
 
 function keyInput(event) {
 	let key = event.key;
-	let array_arrow = ['ArrowUp', 'ArrowDown'];
+	let array_arrow = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 	let array_digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 	if (array_arrow.includes(key)) {
@@ -71,6 +93,9 @@ function keyInput(event) {
 
 function keyInputArrow(key) {
 	key_input_var = '';
+	clearInterval(page_interval);
+	page_interval_ID = setInterval(loadPage, page_interval);
+
 	if (key === 'ArrowUp') {
 		if (next_page_number!='') {
 			last_page_number = current_page_number;
@@ -83,7 +108,15 @@ function keyInputArrow(key) {
 			current_page_number = prev_page_number;
 			loadPage() 
 		}
+	} else if (key === 'ArrowLeft') {
+		current_subpage = prev_subpage;
+		loadSubPage();
+	} else if (key === 'ArrowRight') {
+		current_subpage = next_subpage;
+		loadSubPage();
 	}
+
+
 }
 
 function keyInputDigit(key) {
@@ -99,6 +132,9 @@ function keyInputDigit(key) {
 			last_page_number = current_page_number;
 			current_page_number = String(temp_int);
 			loadPage(temp_int)
+			
+			clearInterval(page_interval);
+			page_interval_ID = setInterval(loadPage, page_interval);
 		} else {
 			updatePageNumber(current_page_number);
 		}
@@ -109,8 +145,11 @@ function keyInputDigit(key) {
 loadPage()
 updateClock();
 
-const clock_interval_ID = setInterval(updateClock, 250);
-const page_interval_ID = setInterval(loadPage, 60*1000);
+let clock_interval = 250;
+let page_interval = 2*60*1000;
+
+let clock_interval_ID = setInterval(updateClock, clock_interval);
+let page_interval_ID = setInterval(loadPage, page_interval);
 
 
 document.addEventListener('keydown', function(event) {
