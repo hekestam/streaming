@@ -89,13 +89,7 @@ function unfocusAll() {
 } 
 
 function preventFocus(event) {
-	console.log('hej');
-	return
-	if (event.relatedTarget) {
-		 // Revert focus back to previous blurring element
-		console.log(event.relatedTarget);
-		//event.relatedTarget.focus();
-	}
+	event.preventDefault()
 }
 
 function updateIdx() {
@@ -122,7 +116,7 @@ function addEventListeners() {
 	    keyInput(event);
 	})
 
-	//document.body.addEventListener("focus", preventFocus);
+	document.body.addEventListener("mousedown", preventFocus);
 
 	let els = document.getElementsByClassName('streaming_service');
 
