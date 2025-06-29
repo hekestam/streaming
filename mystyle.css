@@ -30,10 +30,10 @@ div.cell_container:focus-within{
 	background-color:grey;
 }
 
-div.cell_container:hover{
+/*div.cell_container:hover{
 	outline: 2px solid white;
 	background-color:grey;
-}
+}*/
 
 div.streaming_service {
 	/*outline: 2px dashed white;*/
@@ -45,7 +45,7 @@ div.streaming_service {
 
 img.tv_icon {
 	max-width:80%;
-	max-height:30px;
+	max-height:4.5svh;
 	filter:brightness(0) saturate(100%) invert(100%);    /* https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
