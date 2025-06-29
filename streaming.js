@@ -117,6 +117,7 @@ function addEventListeners() {
 	})
 
 	document.body.addEventListener("mousedown", preventFocus);
+	document.addEventListener("mousedown", preventFocus);
 
 	let els = document.getElementsByClassName('streaming_service');
 
