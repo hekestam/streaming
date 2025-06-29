@@ -88,6 +88,16 @@ function unfocusAll() {
 	//}
 } 
 
+function preventFocus(event) {
+	console.log('hej');
+	return
+	if (event.relatedTarget) {
+		 // Revert focus back to previous blurring element
+		console.log(event.relatedTarget);
+		//event.relatedTarget.focus();
+	}
+}
+
 function updateIdx() {
 	current_idx = current_y_index*(max_x_index+1) + (current_x_index+1) - 1;
 }
@@ -111,6 +121,8 @@ function addEventListeners() {
 	document.addEventListener('keydown', function(event) {
 	    keyInput(event);
 	})
+
+	//document.body.addEventListener("focus", preventFocus);
 
 	let els = document.getElementsByClassName('streaming_service');
 
