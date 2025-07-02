@@ -102,7 +102,7 @@ div#clock {
 }
 
 img#text_tv_img {
-	height:100%;
-	width:100%;
+	height:97lvh;
+	max-width:97lvw;
 	object-fit: contain;
 }
