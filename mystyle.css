@@ -1,16 +1,19 @@
 body {
 	background-color:black;
+	/*width = 100lvw;*/
+	/*min-height = 100vh;*/
+	/*margin:0px;*/
 }
 
 div.grid_container {
 	display:grid;
 	grid-template-columns: 25% 25% 25% 25%;
 	grid-template-rows: 50% 50%;
-	/*height:50%;*/
-	width:80%
+	height:38lvh;
+	width:80%;
 	margin-top:10%;
 	margin-left:10%;
-	margin: 15% 10% 15% 10%;
+	margin: 31vh 10lvw 31lvh 10lvw;
 	align-items: center;
 	justify-content: center;
 }
