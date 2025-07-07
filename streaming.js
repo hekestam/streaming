@@ -6,6 +6,10 @@ const max_x_index = 3;
 const max_y_index = 1;
 const max_idx = max_y_index*(max_x_index+1) + (max_x_index+1) - 1
 
+let mouse_interval = 5*1000;
+let mouse_interval_ID = null;
+let mouse_cursor_visible = true;
+
 
 function keyInput(event) {
 	let key = event.key;
@@ -41,6 +45,7 @@ function keyInputArrow(key) {
 
 	updateIdx();
 	updateSelection();
+	hideMouseCursor();
 }
 
 function keyInputDigit(key) {
@@ -92,6 +97,50 @@ function preventFocus(event) {
 	event.preventDefault()
 }
 
+function moveMouseCursor() {
+	if (mouse_interval_ID) {
+		window.clearTimeout(mouse_interval_ID);
+	}
+	if (!mouse_cursor_visible) {
+		el = document.getElementById('general_overlay');
+		el.style.cursor = "default";
+		document.body.style.cursor = "default";
+
+		let els = document.getElementsByTagName('a');
+
+		for (let i = 0; i < els.length; i++) {
+			el = els[i];
+			el.style.cursor = "pointer";
+		}
+
+		mouse_cursor_visible = true;
+	}
+	mouse_interval_ID = window.setTimeout(hideMouseCursor, mouse_interval);
+}
+
+function hideMouseCursor() {
+	if (mouse_interval_ID) {
+		window.clearTimeout(mouse_interval_ID);
+		mouse_interval_ID = null;
+	}
+	if (!mouse_cursor_visible) {
+		return;
+	}
+	mouse_interval_ID = null;
+	el = document.getElementById('general_overlay');
+	el.style.cursor = "none";
+	document.body.style.cursor = "none";
+
+	let els = document.getElementsByTagName('a');
+
+	for (let i = 0; i < els.length; i++) {
+		el = els[i];
+		el.style.cursor = "none";
+	}
+
+	mouse_cursor_visible = false;
+}
+
 function updateIdx() {
 	current_idx = current_y_index*(max_x_index+1) + (current_x_index+1) - 1;
 }
@@ -118,6 +167,8 @@ function addEventListeners() {
 
 	document.body.addEventListener("mousedown", preventFocus);
 	document.addEventListener("mousedown", preventFocus);
+
+	document.addEventListener("mousemove", moveMouseCursor);
 
 	let els = document.getElementsByClassName('streaming_service');
 

@@ -142,16 +142,45 @@ function keyInputDigit(key) {
 
 }
 
+function hideMouseCursor() {
+	if (mouse_interval_ID) {
+		window.clearTimeout(mouse_interval_ID);
+		mouse_interval_ID = null;
+	}
+	if (!mouse_cursor_visible) {
+		return;
+	}
+	mouse_interval_ID = null;
+	document.body.style.cursor = "none";
+	mouse_cursor_visible = false;
+}
+
 loadPage()
 updateClock();
 
 let clock_interval = 250;
 let page_interval = 2*60*1000;
+let mouse_interval = 5*1000;
 
 let clock_interval_ID = setInterval(updateClock, clock_interval);
 let page_interval_ID = setInterval(loadPage, page_interval);
+let mouse_interval_ID = null;
+
+let mouse_cursor_visible = true;
 
 
 document.addEventListener('keydown', function(event) {
     keyInput(event);
 })
+
+document.onmousemove = function() {
+	if (mouse_interval_ID) {
+		window.clearTimeout(mouse_interval_ID);
+	}
+	if (!mouse_cursor_visible) {
+		document.body.style.cursor = "default";
+		mouse_cursor_visible = true;
+	}
+	mouse_interval_ID = window.setTimeout(hideMouseCursor, mouse_interval);
+};
+

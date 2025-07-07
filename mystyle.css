@@ -5,6 +5,19 @@ body {
 	/*margin:0px;*/
 }
 
+div#general_overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	/*cursor: none; */
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 div.grid_container {
 	display:grid;
 	grid-template-columns: 25% 25% 25% 25%;
