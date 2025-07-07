@@ -169,6 +169,7 @@ function addEventListeners() {
 	document.addEventListener("mousedown", preventFocus);
 
 	document.addEventListener("mousemove", moveMouseCursor);
+	mouse_interval_ID = window.setTimeout(hideMouseCursor, mouse_interval);
 
 	let els = document.getElementsByClassName('streaming_service');
 

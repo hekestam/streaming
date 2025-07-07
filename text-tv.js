@@ -164,7 +164,7 @@ let mouse_interval = 5*1000;
 
 let clock_interval_ID = setInterval(updateClock, clock_interval);
 let page_interval_ID = setInterval(loadPage, page_interval);
-let mouse_interval_ID = null;
+let mouse_interval_ID = window.setTimeout(hideMouseCursor, mouse_interval);
 
 let mouse_cursor_visible = true;
 
