@@ -66,10 +66,17 @@ function updateClock() {
 	let hour = String(d.getHours()).padStart(2,'0');
 	let minute = String(d.getMinutes()).padStart(2,'0');
 	let sec = String(d.getSeconds()).padStart(2,'0');
+	let day_of_week = d.getDay();
 
 	let time_string = hour + ':' + minute + ':' + sec;
 	let time_el = document.getElementById("clock");
+
 	let spacer = '&nbsp;'.repeat(7);
+	if (day_of_week === 4) { // Thursday
+		spacer = '&nbsp;'.repeat(6);
+		//console.log('Thursday!!!');
+	}
+
 	time_el.innerHTML = '<strong>' + spacer + time_string + '</strong>';
 }
 
