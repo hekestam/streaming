@@ -15,15 +15,21 @@ function keyInput(event) {
 	let key = event.key;
 	let array_arrow = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
 	let array_digit = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+	let array_space = [' '];
+	//console.log(key);
 
 	if (array_arrow.includes(key)) {
 		//console.log(key);
 		//return
 		keyInputArrow(key);
 	} else if (array_digit.includes(key)) {
-		console.log(key);
+		//console.log(key);
 		return
 		keyInputDigit(key);
+	} else if (array_space.includes(key)) {
+		//console.log('Space!!!');
+		return
+		keyInputSpace(key);
 	}
 }
 
