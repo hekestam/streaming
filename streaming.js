@@ -6,7 +6,7 @@ const max_x_index = 3;
 const max_y_index = 1;
 const max_idx = max_y_index*(max_x_index+1) + (max_x_index+1) - 1
 
-let mouse_interval = 5*1000;
+let mouse_interval = 2*1000;
 let mouse_interval_ID = null;
 let mouse_cursor_visible = true;
 
