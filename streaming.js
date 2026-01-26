@@ -2,9 +2,9 @@ let current_x_index = 0;
 let current_y_index = 0;
 let current_idx = 0;
 
-const max_x_index = 3;
-const max_y_index = 1;
-const max_idx = max_y_index*(max_x_index+1) + (max_x_index+1) - 1
+let max_x_index = 3;
+let max_y_index = 1;
+let max_idx = max_y_index*(max_x_index+1) + (max_x_index+1) - 1
 
 let mouse_interval = 2*1000;
 let mouse_interval_ID = null;
