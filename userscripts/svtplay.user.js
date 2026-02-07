@@ -2,7 +2,7 @@
 // @name         SVT Nyheter
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-07.01
+// @version      2026-02-07.02
 // @description  Autofocus on play button
 // @match        https://www.svtplay.se/aktuellt
 // @match        https://www.svtplay.se/rapport
