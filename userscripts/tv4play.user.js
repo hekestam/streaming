@@ -2,7 +2,7 @@
 // @name         TV4 Nyheterna
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-07.01
+// @version      2026-02-07.02
 // @description  Autofocus on play button
 // @match        https://www.tv4play.se/nyheter
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tv4play.se
