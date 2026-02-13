@@ -2,7 +2,7 @@
 // @name         SVT Play Live
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-13.05
+// @version      2026-02-13.06
 // @description  Focus on content for SVT Play live channels
 // @match        https://www.svtplay.se/kanaler/svt1*
 // @match        https://www.svtplay.se/kanaler/svt2*
@@ -16,7 +16,7 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const yourFunction = async () => {
-    await delay(1750); // Wait for relevant part of DOM to be loaded
+    await delay(10); // Wait for relevant part of DOM to be loaded
     console.log('hejhej')
     let el = document.getElementById('play_main-content');
     el.style.cssText += 'margin-left:15px;margin-right:15px';
