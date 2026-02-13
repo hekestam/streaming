@@ -13,13 +13,19 @@
 // @run-at       document-end
 // ==/UserScript==
 
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
-(function() {
-    'use strict';
+const yourFunction = async () => {
+    await delay(1750); // Wait for relevant part of DOM to be loaded
     let el = document.getElementById('play_main-content');
     el.style.cssText += 'margin-left:15px;margin-right:15px';
 
     let el2 = document.querySelector('[data-rt="video-player-channels"]');
     el2.scrollIntoView()
+};
+
+(function() {
+    'use strict';
+    yourFunction();
 })();
 
