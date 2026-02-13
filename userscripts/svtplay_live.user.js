@@ -4,10 +4,10 @@
 // @author       hekestam
 // @version      2026-02-13.04
 // @description  Focus on content for SVT Play live channels
-// @match        https://www.svtplay.se/kanaler/svt1
-// @match        https://www.svtplay.se/kanaler/svt2
-// @match        https://www.svtplay.se/kanaler/svtbarn
-// @match        https://www.svtplay.se/kanaler/kunskapskanalen
+// @match        https://www.svtplay.se/kanaler/svt1*
+// @match        https://www.svtplay.se/kanaler/svt2*
+// @match        https://www.svtplay.se/kanaler/svtbarn*
+// @match        https://www.svtplay.se/kanaler/kunskapskanalen*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=svtplay.se
 // @grant        none
 // @run-at       document-end
