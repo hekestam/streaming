@@ -2,7 +2,7 @@
 // @name         SVT Play Live
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-13.02
+// @version      2026-02-13.03
 // @description  Focus on content for SVT Play live channels
 // @match        https://www.svtplay.se/kanaler/svt1
 // @match        https://www.svtplay.se/kanaler/svt2
