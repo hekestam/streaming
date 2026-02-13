@@ -19,7 +19,7 @@
     let el = document.getElementById('play_main-content');
     el.style.cssText += 'margin-left:15px;margin-right:15px';
 
-    let el = document.querySelector('[data-rt="video-player-channels"]');
-    el.scrollIntoView()
+    let el2 = document.querySelector('[data-rt="video-player-channels"]');
+    el2.scrollIntoView()
 })();
 
