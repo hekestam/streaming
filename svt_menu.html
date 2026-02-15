@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>SVT Play</title>
+		<link rel="icon" type="image/x-icon" href="favicon/favicon-light.ico">
+		<link rel="stylesheet" href="mystyle.css">
+		<style>
+			div.grid_container {
+				display:grid;
+				grid-template-columns: 25% 25%;
+				grid-template-rows: 25% 25% 25% 25% 25%;
+				height:38lvh;
+				width:80%;
+				margin-top:10%;
+				margin-left:10%;
+				margin: 31vh 10lvw 31lvh 10lvw;
+				align-items: center;
+				justify-content: center;
+			}
+			span.link-spanner {
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="grid_container">
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="https://www.svtplay.se/kanaler/svt1?start=auto" rel="noopener noreferrer">
+				<span class="link-spanner">SVT 1</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="https://www.svtplay.se/kanaler/svt2?start=auto" rel="noopener noreferrer">
+				<span class="link-spanner">SVT 2</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="https://www.svtplay.se/" rel="noopener noreferrer">
+				<span class="link-spanner">SVT Play startsida</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss3">
+			<a href="https://www.svtplay.se/rapport" rel="noopener noreferrer">
+				<span class="link-spanner">Rapport</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss3">
+			<a href="https://www.svtplay.se/aktuellt" rel="noopener noreferrer">
+				<span class="link-spanner">Aktuellt</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss3">
+			<a href="https://www.svtplay.se/agenda" rel="noopener noreferrer">
+				<span class="link-spanner">Agenda</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="https://www.svtplay.se/lokala-nyheter-stockholm" rel="noopener noreferrer">
+				<span class="link-spanner">Lokala nyheter</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="https://www.svtplay.se/sverige-live-1" rel="noopener noreferrer">
+				<span class="link-spanner">Sverige live</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="https://www.svtplay.se/morgonstudion" rel="noopener noreferrer">
+				<span class="link-spanner">Morgonstudion</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="history.back();" rel="noopener noreferrer">
+				<span class="link-spanner">Tillbaka</span>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div id="general_overlay"></div>
+	<script src="streaming.js"></script>
+	<script>
+		max_x_index = 1;
+		max_y_index = 4;
+		max_idx = max_y_index*(max_x_index+1) + (max_x_index+1) - 1
+	</script>
+	</body>
+</html>
