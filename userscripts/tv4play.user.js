@@ -5,7 +5,7 @@
 // @version      2026-02-13.01
 // @description  Autofocus on play button
 // @match        https://www.tv4play.se/nyheter
-// @match        https://www.tv4play.se/program/*/efter-fem
+// @match        https://www.tv4play.se/program/*/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tv4play.se
 // @grant        none
 // @run-at       document-end
