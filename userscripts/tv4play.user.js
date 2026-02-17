@@ -36,7 +36,7 @@ const yourFunction = async () => {
     }
     await delay(500);
     for (const a of document.querySelectorAll("a")) {
-        if (a.textContent.includes("Titta nu")) {
+        if (a.textContent.includes("Titta nu")||a.textContent.includes(name)) {
             console.log(a.textContent);
             a.focus();
             foundSomething = true;
