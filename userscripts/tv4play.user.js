@@ -2,7 +2,7 @@
 // @name         TV4 Nyheterna
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-17.01
+// @version      2026-02-17.02
 // @description  Autofocus on play button
 // @match        https://www.tv4play.se/nyheter
 // @match        https://www.tv4play.se/program/*/*
@@ -25,3 +25,16 @@ const yourFunction = async () => {
     yourFunction();
 })();
 
+
+function callback(mutationList) {
+    console.log('TaDA!!')
+}
+
+const userListElement = document.querySelector('[nwbuttonvariant="primary"]');
+
+const observer = new MutationObserver(callback);
+observer.observe(document, {
+  attributeFilter: ['nwbuttonvariant="primary"'],
+  subtree: true,
+  childList: true,
+});
