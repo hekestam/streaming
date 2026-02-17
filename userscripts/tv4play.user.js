@@ -2,7 +2,7 @@
 // @name         TV4 Nyheterna
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-17.07
+// @version      2026-02-17.08
 // @description  Autofocus on play button
 // @match        https://www.tv4play.se/nyheter
 // @match        https://www.tv4play.se/program/*/*
@@ -28,7 +28,7 @@ const yourFunction = async () => {
     while (!foundSomething) {
         await delay(100); // Wait for relevant part of DOM to be loaded
         for (const a of document.querySelectorAll("a")) {
-            if (a.textContent.includes("Titta nu")||a.textContent.includes(name)) {
+            if (a.textContent.includes("Titta nu")||a.textContent.includes(name)||a.textContent.includes('Avsnitt ')) {
                  console.log(a.textContent);
                  //a.focus();
                  foundSomething = true;
@@ -38,10 +38,10 @@ const yourFunction = async () => {
     }
     await delay(500);
     for (const a of document.querySelectorAll("a")) {
-        if (a.textContent.includes("Titta nu")||a.textContent.includes(name)) {
+        if (a.textContent.includes("Titta nu")||a.textContent.includes(name)||a.textContent.includes('Avsnitt ')) {
             console.log(a.textContent);
             a.focus();
-            foundSomething = true;
+            //foundSomething = true;
             break;
         }
     }
