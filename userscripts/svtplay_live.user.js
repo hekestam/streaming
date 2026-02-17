@@ -21,7 +21,7 @@ const yourFunction = async () => {
     let el = document.getElementById('play_main-content');
     el.style.cssText += 'margin-left:15px;margin-right:15px';
 
-    let el2 = document.querySelector('[data-rt="video-player-channels"]');
+    let el2 = document.getElementsByTagName('video')[0];
     el2.scrollIntoView()
 };
 
