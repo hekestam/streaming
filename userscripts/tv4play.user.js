@@ -14,7 +14,7 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const yourFunction = async () => {
-    await delay(2000); // Wait for relevant part of DOM to be loaded
+    await delay(5000); // Wait for relevant part of DOM to be loaded
     console.log('hejhej')
     let el = document.querySelector('[nwbuttonvariant="primary"]');
     el.focus();
