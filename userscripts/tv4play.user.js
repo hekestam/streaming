@@ -2,7 +2,7 @@
 // @name         TV4 Nyheterna
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-17.06
+// @version      2026-02-17.07
 // @description  Autofocus on play button
 // @match        https://www.tv4play.se/nyheter
 // @match        https://www.tv4play.se/program/*/*
@@ -22,6 +22,8 @@ const yourFunction = async () => {
                    "Augusti", "September", "Oktober", "November", "December"];
     const d = new Date();
     let name = month[d.getMonth()].toLowerCase();
+    let name_prev = month[d.getMonth()-1].toLowerCase();
+    if (name == 'januari') {name_prev = 'december';}
     let foundSomething = false;
     while (!foundSomething) {
         await delay(100); // Wait for relevant part of DOM to be loaded
