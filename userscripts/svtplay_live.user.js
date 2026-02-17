@@ -2,7 +2,7 @@
 // @name         SVT Play Live
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-17.02
+// @version      2026-02-17.03
 // @description  Focus on content for SVT Play live channels
 // @match        https://www.svtplay.se/kanaler/svt1*
 // @match        https://www.svtplay.se/kanaler/svt2*
@@ -20,7 +20,7 @@ const yourFunction = async () => {
     let el = document.getElementById('play_main-content');
     el.style.cssText += 'margin-left:15px;margin-right:15px';
 
-    await delay(200); // Wait for relevant part of DOM to be loaded
+    await delay(2000); // Wait for relevant part of DOM to be loaded
     let el2 = document.getElementsByTagName('video')[0];
     el2.scrollIntoView()
 };
