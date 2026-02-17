@@ -16,11 +16,11 @@
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
 const yourFunction = async () => {
-    await delay(10); // Wait for relevant part of DOM to be loaded
     console.log('hejhej')
     let el = document.getElementById('play_main-content');
     el.style.cssText += 'margin-left:15px;margin-right:15px';
 
+    await delay(200); // Wait for relevant part of DOM to be loaded
     let el2 = document.getElementsByTagName('video')[0];
     el2.scrollIntoView()
 };
