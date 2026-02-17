@@ -2,7 +2,7 @@
 // @name         TV4 Nyheterna
 // @namespace    https://hekestam.ekestam.net
 // @author       hekestam
-// @version      2026-02-17.05
+// @version      2026-02-17.06
 // @description  Autofocus on play button
 // @match        https://www.tv4play.se/nyheter
 // @match        https://www.tv4play.se/program/*/*
@@ -18,11 +18,15 @@ const yourFunction = async () => {
     console.log('hejhej')
     //let el = document.querySelector('[nwbuttonvariant="primary"]');
     //el.focus();
+    const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli",
+                   "Augusti", "September", "Oktober", "November", "December"];
+    const d = new Date();
+    let name = month[d.getMonth()].toLowerCase();
     let foundSomething = false;
     while (!foundSomething) {
         await delay(100); // Wait for relevant part of DOM to be loaded
         for (const a of document.querySelectorAll("a")) {
-            if (a.textContent.includes("Titta nu")) {
+            if (a.textContent.includes("Titta nu")||a.textContent.includes(name)) {
                  console.log(a.textContent);
                  //a.focus();
                  foundSomething = true;
