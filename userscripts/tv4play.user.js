@@ -28,21 +28,29 @@ const yourFunction = async () => {
     while (!foundSomething) {
         await delay(250); // Wait for relevant part of DOM to be loaded
         for (const a of document.querySelectorAll("a")) {
-            if (a.textContent.includes("Titta nu")||a.textContent.includes(name)||a.textContent.includes('Avsnitt ')) {
-                 console.log(a.textContent);
-                 //a.focus();
-                 foundSomething = true;
-                 break;
+            if (a.textContent.includes("Titta nu")||
+                a.textContent.includes(name)||
+                a.textContent.includes('Avsnitt ')||
+                a.textContent.includes('Sänds idag')||
+                a.textContent.includes('Fortsätt titta')) {
+                   console.log(a.textContent);
+                   //a.focus();
+                   foundSomething = true;
+                   break;
              }
         }
     }
     await delay(750);
     for (const a of document.querySelectorAll("a")) {
-        if (a.textContent.includes("Titta nu")||a.textContent.includes(name)||a.textContent.includes('Avsnitt ')) {
-            console.log(a.textContent);
-            a.focus();
-            //foundSomething = true;
-            break;
+        if (a.textContent.includes("Titta nu")||
+            a.textContent.includes(name)||
+            a.textContent.includes('Avsnitt ')||
+            a.textContent.includes('Sänds idag')||
+            a.textContent.includes('Fortsätt titta')) {
+                console.log(a.textContent);
+                a.focus();
+                //foundSomething = true;
+                break;
         }
     }
 };
