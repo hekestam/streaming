@@ -16,6 +16,11 @@ div#general_overlay {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	background-image: url(images/bunny.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 25vh;
+	z-index: -1;
 }
 
 div.grid_container {
