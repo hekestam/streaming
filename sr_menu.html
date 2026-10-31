@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sveries Radio</title>
+		<link rel="icon" type="image/x-icon" href="favicon/favicon-light.ico">
+		<link rel="stylesheet" href="mystyle.css">
+		<style>
+			div.grid_container {
+				display:grid;
+				grid-template-columns: 25%;
+				grid-template-rows: 25% 25% 25% 25% 25%;
+				height:38lvh;
+				width:80%;
+				margin-top:10%;
+				margin-left:10%;
+				margin: 31vh 10lvw 31lvh 10lvw;
+				align-items: center;
+				justify-content: center;
+			}
+			span.link-spanner {
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+	<audio id="srRadio" preload="none"></audio>
+	<div class="grid_container">
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="play_radio(event, 'https://live1.sr.se/p1-aac-128')" rel="noopener noreferrer">
+				<span class="link-spanner">P1</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="play_radio(event, 'https://live1.sr.se/p2-aac-128')" rel="noopener noreferrer">
+				<span class="link-spanner">P2</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss3">
+			<a href="#" onclick="play_radio(event, 'https://live1.sr.se/p3-aac-128')" rel="noopener noreferrer">
+				<span class="link-spanner">P3</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="play_radio(event, 'https://live1.sr.se/p4sth-aac-128')" rel="noopener noreferrer">
+				<span class="link-spanner">P4 Stockholm</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="history.back();" rel="noopener noreferrer">
+				<span class="link-spanner">Tillbaka</span>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div id="general_overlay"></div>
+	<script src="streaming.js"></script>
+	<script>
+		max_x_index = 0;
+		max_y_index = 4;
+		max_idx = max_y_index*(max_x_index+1) + (max_x_index+1) - 1
+	</script>
+<script>
+  function play_radio(event, streamUrl) {
+    event.preventDefault();
+
+    const radio = document.getElementById("srRadio");
+
+    radio.pause();
+    radio.src = streamUrl;
+    radio.load();
+    radio.play()
+  }
+</script>
+	</body>
+</html>
