@@ -75,6 +75,7 @@
     event.preventDefault();
 
     const radio = document.getElementById("srRadio");
+    radio.volume = 0.5;
 
     radio.pause();
     radio.src = streamUrl;
