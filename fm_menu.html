@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sveries Radio</title>
+		<link rel="icon" type="image/x-icon" href="favicon/favicon-light.ico">
+		<link rel="stylesheet" href="mystyle.css">
+		<style>
+			div.grid_container {
+				display:grid;
+				grid-template-columns: 25%;
+				grid-template-rows: 25% 25% 25% 25% 25%;
+				height:38lvh;
+				width:80%;
+				margin-top:10%;
+				margin-left:10%;
+				margin: 31vh 10lvw 31lvh 10lvw;
+				align-items: center;
+				justify-content: center;
+			}
+			span.link-spanner {
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+	<audio id="srRadio" preload="none"></audio>
+	<div class="grid_container">
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="play_radio(event, 'https://fm01-ice.stream.khz.se/fm01_aac')" rel="noopener noreferrer">
+				<span class="link-spanner">RIX FM</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="play_radio(event, 'https://live-bauerse-fm.sharp-stream.com/nrj_instreamtest_se_mp3')" rel="noopener noreferrer">
+				<span class="link-spanner">NRJ</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss3">
+			<a href="#" onclick="play_radio(event, 'https://fm04-ice.stream.khz.se/fm04_aac')" rel="noopener noreferrer">
+				<span class="link-spanner">Power Hit Radio</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="play_radio(event, 'https://live-bauerse-fm.sharp-stream.com/mixmegapol_instream_se_mp3')" rel="noopener noreferrer">
+				<span class="link-spanner">Mix Megapol</span>
+			</a>
+		</div>
+		</div>
+		<div class="cell_container">
+		<div class="streaming_service" id="ss4">
+			<a href="#" onclick="history.back();" rel="noopener noreferrer">
+				<span class="link-spanner">Tillbaka</span>
+			</a>
+		</div>
+		</div>
+	</div>
+	<div id="general_overlay"></div>
+	<script src="streaming.js"></script>
+	<script>
+		max_x_index = 0;
+		max_y_index = 4;
+		max_idx = max_y_index*(max_x_index+1) + (max_x_index+1) - 1
+	</script>
+<script>
+  function play_radio(event, streamUrl) {
+    event.preventDefault();
+
+    const radio = document.getElementById("srRadio");
+    radio.volume = 0.25;
+
+    radio.pause();
+    radio.src = streamUrl;
+    radio.load();
+    radio.play()
+  }
+</script>
+	</body>
+</html>
